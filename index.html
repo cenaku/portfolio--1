@@ -14,7 +14,6 @@
       --accent: #8b4a2f;
       --muted: #9a9590;
       --rule: #d4cfc6;
-      --col: 1fr;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -31,6 +30,39 @@
       overflow-x: hidden;
     }
 
+    /* ── UTILITY ── */
+    .label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .mono {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+    }
+
+    .serif {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+    }
+
+    /* ── LIST RESET ── */
+    nav ul,
+    .hero-index,
+    .contact-links,
+    .works-list,
+    .skill-list,
+    .career-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
     /* ── HEADER ── */
     header {
       position: fixed;
@@ -45,18 +77,9 @@
       backdrop-filter: blur(6px);
     }
 
-    .logo {
-      font-family: 'DM Mono', monospace;
-      font-size: 11px;
-      letter-spacing: 0.15em;
-      color: var(--muted);
-      text-transform: uppercase;
-    }
+    .logo { font-size: 11px; }
 
-    nav {
-      display: flex;
-      gap: 2.5rem;
-    }
+    nav { display: flex; gap: 2.5rem; }
 
     nav a {
       font-family: 'DM Mono', monospace;
@@ -87,28 +110,16 @@
       border-right: 1px solid var(--rule);
     }
 
-    .hero-issue {
-      font-family: 'DM Mono', monospace;
-      font-size: 10px;
-      letter-spacing: 0.2em;
-      color: var(--muted);
-      text-transform: uppercase;
-      margin-bottom: 3rem;
-    }
+    .hero-issue { letter-spacing: 0.2em; margin-bottom: 3rem; }
 
     .hero-name {
-      font-family: 'Cormorant Garamond', serif;
       font-size: clamp(4rem, 8vw, 7rem);
-      font-weight: 300;
       line-height: 0.95;
       letter-spacing: -0.02em;
       margin-bottom: 2rem;
     }
 
-    .hero-name em {
-      font-style: italic;
-      color: var(--accent);
-    }
+    .hero-name em { font-style: italic; color: var(--accent); }
 
     .hero-desc {
       max-width: 48ch;
@@ -126,11 +137,7 @@
       justify-content: space-between;
     }
 
-    .hero-index {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
+    .hero-index { display: flex; flex-direction: column; gap: 0; }
 
     .hero-index-item {
       display: flex;
@@ -145,31 +152,12 @@
 
     .hero-index-item:hover { color: var(--accent); }
 
-    .hero-index-num {
-      font-family: 'DM Mono', monospace;
-      font-size: 10px;
-      color: var(--muted);
-      min-width: 2ch;
-    }
+    .hero-index-num { min-width: 2ch; }
 
-    .hero-index-label {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
-      font-weight: 300;
-      letter-spacing: 0.02em;
-    }
-
-    .hero-bottom {
-      font-family: 'DM Mono', monospace;
-      font-size: 10px;
-      color: var(--muted);
-      letter-spacing: 0.12em;
-    }
+    .hero-index-label { font-size: 1.6rem; letter-spacing: 0.02em; }
 
     /* ── SECTION BASE ── */
-    section {
-      border-bottom: 1px solid var(--rule);
-    }
+    section { border-bottom: 1px solid var(--rule); }
 
     .section-header {
       display: flex;
@@ -179,25 +167,10 @@
       border-bottom: 1px solid var(--rule);
     }
 
-    .section-num {
-      font-family: 'DM Mono', monospace;
-      font-size: 10px;
-      color: var(--muted);
-      letter-spacing: 0.15em;
-    }
-
-    .section-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.4rem;
-      font-weight: 300;
-      letter-spacing: 0.04em;
-    }
+    .section-title { font-size: 2.4rem; letter-spacing: 0.04em; }
 
     /* ── WORKS ── */
-    #works .works-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
+    #works .works-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
 
     .work-item {
       border-right: 1px solid var(--rule);
@@ -239,40 +212,17 @@
       margin-bottom: 0.6rem;
     }
 
-    .work-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      font-weight: 400;
-      margin-bottom: 0.8rem;
-    }
+    .work-title { font-size: 1.3rem; font-weight: 400; margin-bottom: 0.8rem; }
 
-    .work-desc {
-      font-size: 12px;
-      color: var(--muted);
-      line-height: 1.7;
-    }
+    .work-desc { font-size: 12px; color: var(--muted); line-height: 1.7; }
 
     /* ── SKILLS ── */
-    #skills .skills-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
+    #skills .skills-inner { display: grid; grid-template-columns: 1fr 1fr; }
 
-    .skills-col {
-      padding: 3rem;
-      border-right: 1px solid var(--rule);
-    }
-
+    .skills-col { padding: 3rem; border-right: 1px solid var(--rule); }
     .skills-col:last-child { border-right: none; }
 
-    .skills-col-title {
-      font-family: 'DM Mono', monospace;
-      font-size: 10px;
-      letter-spacing: 0.18em;
-      color: var(--muted);
-      text-transform: uppercase;
-      margin-bottom: 2rem;
-    }
+    .skills-col-title { margin-bottom: 2rem; }
 
     .skill-row {
       display: flex;
@@ -282,83 +232,37 @@
       border-bottom: 1px solid var(--rule);
     }
 
-    .skill-name {
-      font-size: 13px;
-    }
+    .skill-name { font-size: 13px; }
 
-    .skill-level {
-      display: flex;
-      gap: 3px;
-    }
+    .skill-level { display: flex; gap: 3px; }
 
-    .skill-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--rule);
-    }
-
+    .skill-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--rule); }
     .skill-dot.on { background: var(--accent); }
 
     /* ── PROFILE ── */
-    #profile .profile-inner {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-    }
+    #profile .profile-inner { display: grid; grid-template-columns: 2fr 1fr; }
 
-    .profile-main {
-      padding: 4rem 3rem;
-      border-right: 1px solid var(--rule);
-    }
+    .profile-main { padding: 4rem 3rem; border-right: 1px solid var(--rule); }
 
     .profile-lead {
-      font-family: 'Cormorant Garamond', serif;
       font-size: clamp(1.4rem, 2.5vw, 1.9rem);
-      font-weight: 300;
       line-height: 1.6;
       margin-bottom: 2.5rem;
     }
 
-    .profile-lead em {
-      font-style: italic;
-      color: var(--accent);
-    }
+    .profile-lead em { font-style: italic; color: var(--accent); }
 
-    .profile-body {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.9;
-      max-width: 60ch;
-    }
+    .profile-body { font-size: 13px; color: var(--muted); line-height: 1.9; max-width: 60ch; }
 
-    .profile-side {
-      padding: 4rem 3rem;
-    }
+    .profile-side { padding: 4rem 3rem; }
 
-    .profile-side-title {
-      font-family: 'DM Mono', monospace;
-      font-size: 10px;
-      letter-spacing: 0.18em;
-      color: var(--muted);
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-    }
+    .profile-side-title { margin-bottom: 1.5rem; }
 
-    .career-item {
-      padding: 0.8rem 0;
-      border-bottom: 1px solid var(--rule);
-    }
+    .career-item { padding: 0.8rem 0; border-bottom: 1px solid var(--rule); }
 
-    .career-year {
-      font-family: 'DM Mono', monospace;
-      font-size: 10px;
-      color: var(--muted);
-      margin-bottom: 0.2rem;
-    }
+    .career-year { margin-bottom: 0.2rem; }
 
-    .career-role {
-      font-size: 12px;
-    }
+    .career-role { font-size: 12px; }
 
     /* ── CONTACT ── */
     #contact .contact-inner {
@@ -369,25 +273,14 @@
     }
 
     .contact-headline {
-      font-family: 'Cormorant Garamond', serif;
       font-size: clamp(2.5rem, 5vw, 8rem);
-      font-weight: 300;
-      line-height: 1;
-      letter-spacing: -0.01em;
-      line-height: 0.9;
+      line-height: 0.65;
+      letter-spacing: -0.03em;
     }
 
-    .contact-headline em {
-      font-style: italic;
-      color: var(--accent);
-    }
+    .contact-headline em { font-style: italic; color: var(--accent); }
 
-    .contact-links {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      align-items: flex-end;
-    }
+    .contact-links { display: flex; flex-direction: column; gap: 1rem; align-items: flex-end; }
 
     .contact-link {
       font-family: 'DM Mono', monospace;
@@ -403,12 +296,7 @@
 
     .contact-link:hover { color: var(--accent); }
 
-    .contact-link-label {
-      font-size: 9px;
-      color: var(--muted);
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-    }
+    .contact-link-label { font-size: 9px; color: var(--muted); letter-spacing: 0.2em; text-transform: uppercase; }
 
     /* ── FOOTER ── */
     footer {
@@ -418,13 +306,6 @@
       align-items: center;
     }
 
-    footer span {
-      font-family: 'DM Mono', monospace;
-      font-size: 10px;
-      color: var(--muted);
-      letter-spacing: 0.12em;
-    }
-
     /* ── FADE IN ── */
     .fade-in {
       opacity: 0;
@@ -432,10 +313,7 @@
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
 
-    .fade-in.visible {
-      opacity: 1;
-      transform: none;
-    }
+    .fade-in.visible { opacity: 1; transform: none; }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
@@ -468,20 +346,22 @@
 
   <!-- HEADER -->
   <header>
-    <div class="logo">M. Moriguchi</div>
+    <div class="logo label">M. Moriguchi</div>
     <nav>
-      <a href="#works">Works</a>
-      <a href="#skills">Skills</a>
-      <a href="#profile">Profile</a>
-      <a href="#contact">Contact</a>
+      <ul>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
   <!-- HERO -->
   <section id="hero">
     <div class="hero-left">
-      <div class="hero-issue">Portfolio — 2026</div>
-      <h1 class="hero-name">Moto<em>haru</em><br>Moriguchi</h1>
+      <div class="hero-issue label">Portfolio — 2026</div>
+      <h1 class="hero-name serif">Moto<em>haru</em><br>Moriguchi</h1>
       <p class="hero-desc">
         友禅染・介護・DTP・報道を経て、<br>
         WebデザインとHTML/CSSへ。<br>
@@ -489,110 +369,114 @@
       </p>
     </div>
     <div class="hero-right">
-      <div class="hero-index">
-        <a href="#works" class="hero-index-item">
-          <span class="hero-index-num">01</span>
-          <span class="hero-index-label">Works</span>
-        </a>
-        <a href="#skills" class="hero-index-item">
-          <span class="hero-index-num">02</span>
-          <span class="hero-index-label">Skills</span>
-        </a>
-        <a href="#profile" class="hero-index-item">
-          <span class="hero-index-num">03</span>
-          <span class="hero-index-label">Profile</span>
-        </a>
-        <a href="#contact" class="hero-index-item">
-          <span class="hero-index-num">04</span>
-          <span class="hero-index-label">Contact</span>
-        </a>
-      </div>
-      <div class="hero-bottom">Kyoto, Japan — Photographer / Designer / Front-end</div>
+      <ul class="hero-index">
+        <li><a href="#works" class="hero-index-item">
+          <span class="hero-index-num mono">01</span>
+          <span class="hero-index-label serif">Works</span>
+        </a></li>
+        <li><a href="#skills" class="hero-index-item">
+          <span class="hero-index-num mono">02</span>
+          <span class="hero-index-label serif">Skills</span>
+        </a></li>
+        <li><a href="#profile" class="hero-index-item">
+          <span class="hero-index-num mono">03</span>
+          <span class="hero-index-label serif">Profile</span>
+        </a></li>
+        <li><a href="#contact" class="hero-index-item">
+          <span class="hero-index-num mono">04</span>
+          <span class="hero-index-label serif">Contact</span>
+        </a></li>
+      </ul>
+      <div class="hero-bottom mono">Kyoto, Japan — Photographer / Designer / Front-end</div>
     </div>
   </section>
 
   <!-- WORKS -->
   <section id="works">
     <div class="section-header">
-      <span class="section-num">01</span>
-      <h2 class="section-title">Works</h2>
+      <span class="section-num label">01</span>
+      <h2 class="section-title serif">Works</h2>
     </div>
-    <div class="works-grid">
-      <div class="work-item fade-in">
+    <ul class="works-grid works-list">
+      <li class="work-item fade-in">
         <div class="work-thumb">
           <div class="work-thumb-placeholder">IMAGE</div>
         </div>
         <div class="work-tag">HTML / CSS</div>
-        <h3 class="work-title">作品タイトル 01</h3>
+        <h3 class="work-title serif">作品タイトル 01</h3>
         <p class="work-desc">作品の説明が入ります。使用技術・制作意図・工夫した点などを簡潔に。</p>
-      </div>
-      <div class="work-item fade-in">
+      </li>
+      <li class="work-item fade-in">
         <div class="work-thumb">
           <div class="work-thumb-placeholder">IMAGE</div>
         </div>
         <div class="work-tag">Editorial Layout</div>
-        <h3 class="work-title">作品タイトル 02</h3>
+        <h3 class="work-title serif">作品タイトル 02</h3>
         <p class="work-desc">作品の説明が入ります。使用技術・制作意図・工夫した点などを簡潔に。</p>
-      </div>
-      <div class="work-item fade-in">
+      </li>
+      <li class="work-item fade-in">
         <div class="work-thumb">
           <div class="work-thumb-placeholder">IMAGE</div>
         </div>
         <div class="work-tag">Photoshop / Illustrator</div>
-        <h3 class="work-title">作品タイトル 03</h3>
+        <h3 class="work-title serif">作品タイトル 03</h3>
         <p class="work-desc">作品の説明が入ります。使用技術・制作意図・工夫した点などを簡潔に。</p>
-      </div>
-    </div>
+      </li>
+    </ul>
   </section>
 
   <!-- SKILLS -->
   <section id="skills">
     <div class="section-header">
-      <span class="section-num">02</span>
-      <h2 class="section-title">Skills</h2>
+      <span class="section-num label">02</span>
+      <h2 class="section-title serif">Skills</h2>
     </div>
     <div class="skills-inner">
       <div class="skills-col fade-in">
-        <div class="skills-col-title">Design & Production</div>
-        <div class="skill-row">
-          <span class="skill-name">Photoshop</span>
-          <div class="skill-level">
-            <div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot"></div>
-          </div>
-        </div>
-        <div class="skill-row">
-          <span class="skill-name">Illustrator</span>
-          <div class="skill-level">
-            <div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot"></div>
-          </div>
-        </div>
-        <div class="skill-row">
-          <span class="skill-name">DTP / Print Output</span>
-          <div class="skill-level">
-            <div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div>
-          </div>
-        </div>
+        <div class="skills-col-title label">Design & Production</div>
+        <ul class="skill-list">
+          <li class="skill-row">
+            <span class="skill-name">Photoshop</span>
+            <div class="skill-level">
+              <div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot"></div>
+            </div>
+          </li>
+          <li class="skill-row">
+            <span class="skill-name">Illustrator</span>
+            <div class="skill-level">
+              <div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot"></div>
+            </div>
+          </li>
+          <li class="skill-row">
+            <span class="skill-name">DTP / Print Output</span>
+            <div class="skill-level">
+              <div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div>
+            </div>
+          </li>
+        </ul>
       </div>
       <div class="skills-col fade-in">
-        <div class="skills-col-title">Web & Code</div>
-        <div class="skill-row">
-          <span class="skill-name">HTML / CSS</span>
-          <div class="skill-level">
-            <div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot"></div><div class="skill-dot"></div>
-          </div>
-        </div>
-        <div class="skill-row">
-          <span class="skill-name">Web Editing</span>
-          <div class="skill-level">
-            <div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot"></div>
-          </div>
-        </div>
-        <div class="skill-row">
-          <span class="skill-name">AI Tools (Claude)</span>
-          <div class="skill-level">
-            <div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot"></div>
-          </div>
-        </div>
+        <div class="skills-col-title label">Web & Code</div>
+        <ul class="skill-list">
+          <li class="skill-row">
+            <span class="skill-name">HTML / CSS</span>
+            <div class="skill-level">
+              <div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot"></div><div class="skill-dot"></div>
+            </div>
+          </li>
+          <li class="skill-row">
+            <span class="skill-name">Web Editing</span>
+            <div class="skill-level">
+              <div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot"></div>
+            </div>
+          </li>
+          <li class="skill-row">
+            <span class="skill-name">AI Tools (Claude)</span>
+            <div class="skill-level">
+              <div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot on"></div><div class="skill-dot"></div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
@@ -600,12 +484,12 @@
   <!-- PROFILE -->
   <section id="profile">
     <div class="section-header">
-      <span class="section-num">03</span>
-      <h2 class="section-title">Profile</h2>
+      <span class="section-num label">03</span>
+      <h2 class="section-title serif">Profile</h2>
     </div>
     <div class="profile-inner">
       <div class="profile-main fade-in">
-        <p class="profile-lead">
+        <p class="profile-lead serif">
           異色に見えるキャリアが、<br>
           自分の中では<em>一本の線</em>でつながっています。
         </p>
@@ -617,27 +501,29 @@
         </p>
       </div>
       <div class="profile-side fade-in">
-        <div class="profile-side-title">Career</div>
-        <div class="career-item">
-          <div class="career-year">2003 – 2012</div>
-          <div class="career-role">友禅染職人 / 森口華弘</div>
-        </div>
-        <div class="career-item">
-          <div class="career-year">2014 – 2019</div>
-          <div class="career-role">介護福祉士 / SOMPOケア</div>
-        </div>
-        <div class="career-item">
-          <div class="career-year">2021 – 2022</div>
-          <div class="career-role">印刷出力 / Pod株式会社</div>
-        </div>
-        <div class="career-item">
-          <div class="career-year">2022 – 2025</div>
-          <div class="career-role">Web編集 / 京都新聞社</div>
-        </div>
-        <div class="career-item">
-          <div class="career-year">2026 –</div>
-          <div class="career-role">Web制作 職業訓練修了</div>
-        </div>
+        <div class="profile-side-title label">Career</div>
+        <ul class="career-list">
+          <li class="career-item">
+            <div class="career-year mono">2003 – 2012</div>
+            <div class="career-role">友禅染職人 / 森口華弘</div>
+          </li>
+          <li class="career-item">
+            <div class="career-year mono">2014 – 2019</div>
+            <div class="career-role">介護福祉士 / SOMPOケア</div>
+          </li>
+          <li class="career-item">
+            <div class="career-year mono">2021 – 2022</div>
+            <div class="career-role">印刷出力 / Pod株式会社</div>
+          </li>
+          <li class="career-item">
+            <div class="career-year mono">2022 – 2025</div>
+            <div class="career-role">Web編集 / 京都新聞社</div>
+          </li>
+          <li class="career-item">
+            <div class="career-year mono">2026 –</div>
+            <div class="career-role">Web制作 職業訓練修了</div>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
@@ -645,32 +531,31 @@
   <!-- CONTACT -->
   <section id="contact">
     <div class="section-header">
-      <span class="section-num">04</span>
-      <h2 class="section-title">Contact</h2>
+      <span class="section-num label">04</span>
+      <h2 class="section-title serif">Contact</h2>
     </div>
     <div class="contact-inner">
-      <h2 class="contact-headline">Get<br><em>in</em><br>touch.</h2>
-      <div class="contact-links">
-        <a href="mailto:zeitgeist0703@gmail.com" class="contact-link">
+      <h2 class="contact-headline serif">Get<br><em>in</em><br>touch.</h2>
+      <ul class="contact-links">
+        <li><a href="mailto:zeitgeist0703@gmail.com" class="contact-link">
           <span class="contact-link-label">Email</span>
           お問い合わせはSNSまたはメールにて
-        </a>
-        <a href="https://github.com/ユーザー名" class="contact-link" target="_blank">
+        </a></li>
+        <li><a href="https://github.com/ユーザー名" class="contact-link" target="_blank">
           <span class="contact-link-label">GitHub</span>
           github.com/ユーザー名
-        </a>
-      </div>
+        </a></li>
+      </ul>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <span>© 2026 Motoharu Moriguchi</span>
-    <span>Kyoto, Japan</span>
+    <span class="mono">© 2026 Motoharu Moriguchi</span>
+    <span class="mono">Kyoto, Japan</span>
   </footer>
 
   <script>
-    // Fade in on scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, i) => {
         if (entry.isIntersecting) {

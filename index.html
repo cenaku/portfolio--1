@@ -392,27 +392,70 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       header { padding: 1rem 1.5rem; }
-      nav ul { gap: 1.5rem; }
+      nav ul { gap: 1.2rem; }
 
       #hero { grid-template-columns: 1fr; }
-      .hero-left { padding: 6rem 1.5rem 3rem; border-right: none; border-bottom: 1px solid var(--rule); }
-      .hero-right { padding: 3rem 1.5rem; }
+      .hero-left {
+        padding: 5.5rem 1.5rem 2.5rem;
+        border-right: none;
+        border-bottom: 1px solid var(--rule);
+      }
+      .hero-issue { margin-bottom: 2rem; }
+      .hero-name { font-size: clamp(2.6rem, 11vw, 4rem); margin-bottom: 1.5rem; }
+      .hero-desc { font-size: 12px; }
+      .hero-right { padding: 2.5rem 1.5rem; }
+      .hero-index-item { padding: 1rem 0; }
+      .hero-index-label { font-size: 1.3rem; }
 
-      .section-header { padding: 1.5rem; }
+      .section-header { padding: 1.2rem 1.5rem; }
+      .section-title { font-size: 1.9rem; }
 
       #works .works-grid { grid-template-columns: 1fr; }
-      .work-item { border-right: none; border-bottom: 1px solid var(--rule); }
+      .work-item {
+        border-right: none;
+        border-bottom: 1px solid var(--rule);
+        padding: 2rem 1.5rem;
+      }
 
       #skills .skills-inner { grid-template-columns: 1fr; }
-      .skills-col { border-right: none; border-bottom: 1px solid var(--rule); }
+      .skills-col {
+        border-right: none;
+        border-bottom: 1px solid var(--rule);
+        padding: 2rem 1.5rem;
+      }
 
       #profile .profile-inner { grid-template-columns: 1fr; }
-      .profile-main { border-right: none; border-bottom: 1px solid var(--rule); }
+      .profile-main {
+        border-right: none;
+        border-bottom: 1px solid var(--rule);
+        padding: 2.5rem 1.5rem;
+      }
+      .profile-lead { font-size: clamp(1.2rem, 4.5vw, 1.6rem); margin-bottom: 2rem; }
+      .profile-side { padding: 2.5rem 1.5rem; }
 
-      #contact .contact-inner { flex-direction: column; gap: 3rem; align-items: flex-start; }
+      #contact .contact-inner {
+        flex-direction: column;
+        gap: 2.5rem;
+        align-items: flex-start;
+        padding: 3rem 1.5rem;
+      }
+      .contact-headline { font-size: clamp(2.2rem, 11vw, 3.5rem); }
       .contact-links { align-items: flex-start; }
 
-      footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+      footer {
+        padding: 1.5rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+      }
+    }
+
+    /* タッチデバイスではホバー演出を無効化 */
+    @media (hover: none) {
+      .work-item:hover { transform: none; box-shadow: none; background: transparent; }
+      .hero-index-item:hover { padding-left: 0; }
+      .hero-index-item:hover::after { opacity: 0; transform: translateX(-6px); }
+      .career-item:hover { padding-left: 0; }
     }
   </style>
 </head>

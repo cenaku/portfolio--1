@@ -8,6 +8,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Sans+JP:wght@300;400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
   <style>
+    /* ============================================
+       8px GRID SYSTEM
+       font-size : 8 / 16 / 24 / 32 / 40 / 48 / 56 / 64 / 72 / 80 / 96 / 112px
+       spacing   : 8 / 16 / 24 / 32 / 40 / 48 / 56 / 64 / 80 / 96 / 112 / 128px
+       line-height: 16 / 24 / 32 / 40 / 48 / 56 / 64 / 80 / 96px
+       clamp() 内の最小・最大も8の倍数で指定
+    ============================================ */
+
     :root {
       --ink: #14120d;
       --paper: #f6f3ec;
@@ -18,7 +26,6 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -26,15 +33,16 @@
       color: var(--ink);
       font-family: 'Noto Sans JP', sans-serif;
       font-weight: 300;
-      font-size: 15px;
-      line-height: 1.8;
+      font-size: 16px;       /* 8×2 */
+      line-height: 32px;     /* 8×4 */
       overflow-x: hidden;
     }
 
     /* ── UTILITY ── */
     .label {
       font-family: 'DM Mono', monospace;
-      font-size: 10px;
+      font-size: 8px;        /* 8×1 */
+      line-height: 16px;     /* 8×2 */
       color: var(--muted);
       letter-spacing: 0.15em;
       text-transform: uppercase;
@@ -42,7 +50,8 @@
 
     .mono {
       font-family: 'DM Mono', monospace;
-      font-size: 10px;
+      font-size: 8px;        /* 8×1 */
+      line-height: 16px;
       color: var(--muted);
       letter-spacing: 0.12em;
     }
@@ -52,7 +61,6 @@
       font-weight: 300;
     }
 
-    /* ── LIST RESET ── */
     nav ul,
     .hero-index,
     .contact-links,
@@ -72,21 +80,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.2rem 3rem;
+      padding: 16px 48px;    /* 8×2 / 8×6 */
       border-bottom: 1px solid var(--rule);
       background: rgba(246, 243, 236, 0.94);
       backdrop-filter: blur(8px);
     }
 
-    .logo { font-size: 11px; }
-
-    nav { display: flex; }
-
-    nav ul { display: flex; gap: 2.5rem; }
+    nav ul { display: flex; gap: 40px; } /* 8×5 */
 
     nav a {
       font-family: 'DM Mono', monospace;
-      font-size: 10px;
+      font-size: 8px;        /* 8×1 */
+      line-height: 16px;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--ink);
@@ -99,14 +104,11 @@
     nav a::after {
       content: '';
       position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 1px;
+      left: 0; bottom: 0;
+      width: 0; height: 1px;
       background: var(--accent);
       transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
-
     nav a:hover { color: var(--accent); }
     nav a:hover::after { width: 100%; }
 
@@ -116,39 +118,42 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       border-bottom: 1px solid var(--rule);
-      padding-top: 60px;
+      padding-top: 64px;     /* header height 8×8 */
     }
 
     .hero-left {
-      padding: 8rem 4rem 6rem 3rem;
+      padding: 128px 64px 96px 48px; /* 8×16 / 8×8 / 8×12 / 8×6 */
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       border-right: 1px solid var(--rule);
     }
 
-    .hero-issue { letter-spacing: 0.2em; margin-bottom: 3rem; }
+    .hero-issue {
+      letter-spacing: 0.2em;
+      margin-bottom: 48px;   /* 8×6 */
+    }
 
     .hero-name {
-      font-size: clamp(4rem, 8vw, 7rem);
-      line-height: 0.95;
+      font-size: clamp(64px, 8vw, 112px); /* 8×8 〜 8×14 */
+      line-height: 96px;     /* 8×12 */
       letter-spacing: -0.02em;
-      margin-bottom: 2rem;
+      margin-bottom: 32px;   /* 8×4 */
     }
 
     .hero-name em { font-style: italic; color: var(--accent); }
 
     .hero-desc {
       max-width: 48ch;
-      font-size: 13px;
+      font-size: 16px;       /* 8×2 */
+      line-height: 32px;     /* 8×4 */
       color: var(--muted);
-      line-height: 1.9;
       border-left: 1px solid var(--accent);
-      padding-left: 1.2rem;
+      padding-left: 16px;    /* 8×2 */
     }
 
     .hero-right {
-      padding: 8rem 3rem 6rem 4rem;
+      padding: 128px 48px 96px 64px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -159,8 +164,8 @@
     .hero-index-item {
       display: flex;
       align-items: baseline;
-      gap: 1.5rem;
-      padding: 1.2rem 0;
+      gap: 24px;             /* 8×3 */
+      padding: 16px 0;       /* 8×2 */
       border-bottom: 1px solid var(--rule);
       text-decoration: none;
       color: var(--ink);
@@ -170,24 +175,25 @@
     .hero-index-item::after {
       content: '→';
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1rem;
+      font-size: 16px;       /* 8×2 */
       margin-left: auto;
       opacity: 0;
-      transform: translateX(-6px);
+      transform: translateX(-8px); /* 8×1 */
       transition: opacity 0.25s, transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .hero-index-item:hover { color: var(--accent); padding-left: 0.4rem; }
+    .hero-index-item:hover { color: var(--accent); padding-left: 8px; } /* 8×1 */
     .hero-index-item:hover::after { opacity: 1; transform: translateX(0); }
 
     .hero-index-num { min-width: 2ch; }
 
-    .hero-index-label { font-size: 1.6rem; letter-spacing: 0.02em; }
-
-    .hero-bottom {
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--rule);
+    .hero-index-label {
+      font-size: 24px;       /* 8×3 */
+      line-height: 32px;     /* 8×4 */
+      letter-spacing: 0.02em;
     }
+
+    .hero-bottom { padding-top: 24px; border-top: 1px solid var(--rule); } /* 8×3 */
 
     /* ── SECTION BASE ── */
     section { border-bottom: 1px solid var(--rule); }
@@ -195,22 +201,51 @@
     .section-header {
       display: flex;
       align-items: baseline;
-      gap: 2rem;
-      padding: 2rem 3rem;
+      gap: 32px;             /* 8×4 */
+      padding: 32px 48px;    /* 8×4 / 8×6 */
       border-bottom: 1px solid var(--rule);
     }
 
-    .section-title { font-size: 2.4rem; letter-spacing: 0.04em; }
+    .section-title {
+      font-size: 40px;       /* 8×5 */
+      line-height: 48px;     /* 8×6 */
+      letter-spacing: 0.04em;
+    }
 
     /* ── WORKS ── */
-    #works .works-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+
+    /* 16:9 × 3 */
+    .works-group { }
+
+    .works-group-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 8px;        /* 8×1 */
+      line-height: 16px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 16px 48px;    /* 8×2 / 8×6 */
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .works-grid-wide {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .works-grid-square {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      border-bottom: 1px solid var(--rule);
+    }
 
     .work-item {
       border-right: 1px solid var(--rule);
-      padding: 3rem;
       cursor: pointer;
       position: relative;
       transition: background 0.3s, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: hidden;
     }
 
     .work-item:last-child { border-right: none; }
@@ -224,12 +259,14 @@
 
     .work-thumb {
       width: 100%;
-      aspect-ratio: 4/3;
       background: var(--rule);
-      margin-bottom: 1.5rem;
       overflow: hidden;
       position: relative;
     }
+
+    .work-thumb.r-16-9 { aspect-ratio: 16/9; }
+    .work-thumb.r-3-2  { aspect-ratio: 3/2; }
+    .work-thumb.r-1-1  { aspect-ratio: 1/1; }
 
     .work-thumb::after {
       content: 'VIEW';
@@ -239,7 +276,7 @@
       display: grid;
       place-items: center;
       font-family: 'DM Mono', monospace;
-      font-size: 9px;
+      font-size: 8px;        /* 8×1 */
       letter-spacing: 0.28em;
       color: transparent;
       transition: background 0.35s ease, color 0.35s ease;
@@ -257,47 +294,71 @@
       align-items: center;
       justify-content: center;
       font-family: 'DM Mono', monospace;
-      font-size: 10px;
+      font-size: 8px;        /* 8×1 */
       color: var(--muted);
       letter-spacing: 0.1em;
     }
 
+    .work-meta {
+      padding: 16px 24px;    /* 8×2 / 8×3 */
+      border-top: 1px solid var(--rule);
+    }
+
+    /* 1:1グリッドはメタ非表示 */
+    .works-grid-square .work-meta { display: none; }
+
     .work-tag {
       font-family: 'DM Mono', monospace;
-      font-size: 9px;
+      font-size: 8px;        /* 8×1 */
+      line-height: 16px;
       letter-spacing: 0.18em;
       color: var(--accent);
       text-transform: uppercase;
-      margin-bottom: 0.6rem;
+      margin-bottom: 8px;    /* 8×1 */
     }
 
-    .work-title { font-size: 1.3rem; font-weight: 400; margin-bottom: 0.8rem; }
+    .work-title {
+      font-size: 16px;       /* 8×2 */
+      line-height: 24px;     /* 8×3 */
+      font-weight: 400;
+      margin-bottom: 8px;    /* 8×1 */
+    }
 
-    .work-desc { font-size: 12px; color: var(--muted); line-height: 1.7; }
+    .work-desc {
+      font-size: 16px;       /* 8×2 — 最小は16pxに統一 */
+      line-height: 24px;     /* 8×3 */
+      color: var(--muted);
+    }
 
     /* ── SKILLS ── */
     #skills .skills-inner { display: grid; grid-template-columns: 1fr 1fr; }
 
-    .skills-col { padding: 3rem; border-right: 1px solid var(--rule); }
+    .skills-col {
+      padding: 48px;         /* 8×6 */
+      border-right: 1px solid var(--rule);
+    }
     .skills-col:last-child { border-right: none; }
 
-    .skills-col-title { margin-bottom: 2rem; }
+    .skills-col-title { margin-bottom: 32px; } /* 8×4 */
 
     .skill-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.9rem 0;
+      padding: 16px 0;       /* 8×2 */
       border-bottom: 1px solid var(--rule);
     }
 
-    .skill-name { font-size: 13px; }
+    .skill-name {
+      font-size: 16px;       /* 8×2 */
+      line-height: 24px;
+    }
 
     .skill-level { display: flex; gap: 4px; }
 
     .skill-dot {
-      width: 7px;
-      height: 7px;
+      width: 8px;            /* 8×1 */
+      height: 8px;           /* 8×1 */
       border-radius: 50%;
       background: transparent;
       border: 1.5px solid var(--rule);
@@ -309,71 +370,94 @@
     /* ── PROFILE ── */
     #profile .profile-inner { display: grid; grid-template-columns: 2fr 1fr; }
 
-    .profile-main { padding: 4rem 3rem; border-right: 1px solid var(--rule); }
+    .profile-main {
+      padding: 64px 48px;    /* 8×8 / 8×6 */
+      border-right: 1px solid var(--rule);
+    }
 
     .profile-lead {
-      font-size: clamp(1.5rem, 2.5vw, 2rem);
-      line-height: 1.65;
-      margin-bottom: 3rem;
+      font-size: clamp(24px, 2.5vw, 32px); /* 8×3 〜 8×4 */
+      line-height: 48px;     /* 8×6 */
+      margin-bottom: 48px;   /* 8×6 */
     }
 
     .profile-lead em { font-style: italic; color: var(--accent); }
 
-    .profile-body { font-size: 13px; color: var(--muted); line-height: 1.95; max-width: 60ch; }
+    .profile-body {
+      font-size: 16px;       /* 8×2 */
+      line-height: 32px;     /* 8×4 */
+      color: var(--muted);
+      max-width: 60ch;
+    }
 
-    .profile-side { padding: 4rem 3rem; }
+    .profile-side { padding: 64px 48px; } /* 8×8 / 8×6 */
 
-    .profile-side-title { margin-bottom: 1.5rem; }
+    .profile-side-title { margin-bottom: 24px; } /* 8×3 */
 
     .career-item {
-      padding: 0.9rem 0;
+      padding: 16px 0;       /* 8×2 */
       border-bottom: 1px solid var(--rule);
       transition: padding-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .career-item:hover { padding-left: 0.4rem; }
+    .career-item:hover { padding-left: 8px; } /* 8×1 */
 
-    .career-year { margin-bottom: 0.2rem; }
+    .career-year { margin-bottom: 0; }
 
-    .career-role { font-size: 12px; }
+    .career-role {
+      font-size: 16px;       /* 8×2 */
+      line-height: 24px;     /* 8×3 */
+    }
 
     /* ── CONTACT ── */
     #contact .contact-inner {
-      padding: 5rem 3rem;
+      padding: 80px 48px;    /* 8×10 / 8×6 */
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
     .contact-headline {
-      font-size: clamp(2.5rem, 5vw, 7.5rem);
+      font-size: clamp(40px, 5vw, 120px); /* 8×5 〜 8×15 */
       line-height: 0.9;
       letter-spacing: -0.03em;
     }
 
     .contact-headline em { font-style: italic; color: var(--accent); }
 
-    .contact-links { display: flex; flex-direction: column; gap: 1rem; align-items: flex-end; }
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;             /* 8×2 */
+      align-items: flex-end;
+    }
 
     .contact-link {
       font-family: 'DM Mono', monospace;
-      font-size: 11px;
+      font-size: 16px;       /* 8×2 */
+      line-height: 24px;
       letter-spacing: 0.12em;
       color: var(--ink);
       text-decoration: none;
       display: flex;
       align-items: center;
-      gap: 0.8rem;
+      gap: 16px;             /* 8×2 */
       transition: color 0.25s;
     }
 
     .contact-link:hover { color: var(--accent); }
 
-    .contact-link-label { font-size: 9px; color: var(--muted); letter-spacing: 0.2em; text-transform: uppercase; }
+    .contact-link-label {
+      font-size: 8px;        /* 8×1 */
+      line-height: 16px;
+      color: var(--muted);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
 
     /* ── FOOTER ── */
     footer {
-      padding: 1.5rem 3rem;
+      padding: 24px 48px;    /* 8×3 / 8×6 */
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -383,78 +467,74 @@
     /* ── FADE IN ── */
     .fade-in {
       opacity: 0;
-      transform: translateY(16px);
+      transform: translateY(16px); /* 8×2 */
       transition: opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1), transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
     }
-
     .fade-in.visible { opacity: 1; transform: none; }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
-      header { padding: 1rem 1.5rem; }
-      nav ul { gap: 1.2rem; }
+      header { padding: 16px 24px; } /* 8×2 / 8×3 */
+      nav ul { gap: 16px; }
 
       #hero { grid-template-columns: 1fr; }
       .hero-left {
-        padding: 5.5rem 1.5rem 2.5rem;
+        padding: 88px 24px 40px; /* 8×11 / 8×3 / 8×5 */
         border-right: none;
         border-bottom: 1px solid var(--rule);
       }
-      .hero-issue { margin-bottom: 2rem; }
-      .hero-name { font-size: clamp(2.6rem, 11vw, 4rem); margin-bottom: 1.5rem; }
-      .hero-desc { font-size: 12px; }
-      .hero-right { padding: 2.5rem 1.5rem; }
-      .hero-index-item { padding: 1rem 0; }
-      .hero-index-label { font-size: 1.3rem; }
-
-      .section-header { padding: 1.2rem 1.5rem; }
-      .section-title { font-size: 1.9rem; }
-
-      #works .works-grid { grid-template-columns: 1fr; }
-      .work-item {
-        border-right: none;
-        border-bottom: 1px solid var(--rule);
-        padding: 2rem 1.5rem;
+      .hero-issue { margin-bottom: 32px; }
+      .hero-name {
+        font-size: clamp(40px, 11vw, 64px); /* 8×5 〜 8×8 */
+        line-height: 56px;   /* 8×7 */
+        margin-bottom: 24px;
       }
+      .hero-right { padding: 40px 24px; }
+      .hero-index-item { padding: 16px 0; }
+      .hero-index-label {
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      .section-header { padding: 16px 24px; }
+      .section-title {
+        font-size: 32px;     /* 8×4 */
+        line-height: 40px;
+      }
+
+      .works-grid-wide { grid-template-columns: 1fr; }
+      .works-grid-square { grid-template-columns: repeat(3, 1fr); }
+      .work-item { border-right: none; border-bottom: 1px solid var(--rule); }
+      .works-group-label { padding: 16px 24px; }
 
       #skills .skills-inner { grid-template-columns: 1fr; }
-      .skills-col {
-        border-right: none;
-        border-bottom: 1px solid var(--rule);
-        padding: 2rem 1.5rem;
-      }
+      .skills-col { border-right: none; border-bottom: 1px solid var(--rule); padding: 32px 24px; }
 
       #profile .profile-inner { grid-template-columns: 1fr; }
-      .profile-main {
-        border-right: none;
-        border-bottom: 1px solid var(--rule);
-        padding: 2.5rem 1.5rem;
+      .profile-main { border-right: none; border-bottom: 1px solid var(--rule); padding: 40px 24px; }
+      .profile-lead {
+        font-size: clamp(24px, 4.5vw, 32px);
+        line-height: 40px;
+        margin-bottom: 32px;
       }
-      .profile-lead { font-size: clamp(1.2rem, 4.5vw, 1.6rem); margin-bottom: 2rem; }
-      .profile-side { padding: 2.5rem 1.5rem; }
+      .profile-side { padding: 40px 24px; }
 
       #contact .contact-inner {
         flex-direction: column;
-        gap: 2.5rem;
+        gap: 40px;           /* 8×5 */
         align-items: flex-start;
-        padding: 3rem 1.5rem;
+        padding: 48px 24px;
       }
-      .contact-headline { font-size: clamp(2.2rem, 11vw, 3.5rem); }
+      .contact-headline { font-size: clamp(40px, 11vw, 56px); } /* 8×5 〜 8×7 */
       .contact-links { align-items: flex-start; }
 
-      footer {
-        padding: 1.5rem;
-        flex-direction: column;
-        gap: 0.5rem;
-        align-items: flex-start;
-      }
+      footer { padding: 24px; flex-direction: column; gap: 8px; align-items: flex-start; }
     }
 
-    /* タッチデバイスではホバー演出を無効化 */
     @media (hover: none) {
       .work-item:hover { transform: none; box-shadow: none; background: transparent; }
       .hero-index-item:hover { padding-left: 0; }
-      .hero-index-item:hover::after { opacity: 0; transform: translateX(-6px); }
+      .hero-index-item:hover::after { opacity: 0; transform: translateX(-8px); }
       .career-item:hover { padding-left: 0; }
     }
   </style>
@@ -482,7 +562,7 @@
       <p class="hero-desc">
         友禅染・介護・DTP・報道を経て、<br>
         WebデザインとHTML/CSSへ。<br>
-       業種は変わった。こだわりは変えなかった。
+        業種は変わった。こだわりは変えなかった。
       </p>
     </div>
     <div class="hero-right">
@@ -514,32 +594,105 @@
       <span class="section-num label">01</span>
       <h2 class="section-title serif">Works</h2>
     </div>
-    <ul class="works-grid works-list">
-      <li class="work-item fade-in">
-        <div class="work-thumb">
-          <div class="work-thumb-placeholder">IMAGE</div>
-        </div>
-        <div class="work-tag">HTML / CSS</div>
-        <h3 class="work-title serif">作品タイトル 01</h3>
-        <p class="work-desc">作品の説明が入ります。使用技術・制作意図・工夫した点などを簡潔に。</p>
-      </li>
-      <li class="work-item fade-in">
-        <div class="work-thumb">
-          <div class="work-thumb-placeholder">IMAGE</div>
-        </div>
-        <div class="work-tag">Editorial Layout</div>
-        <h3 class="work-title serif">作品タイトル 02</h3>
-        <p class="work-desc">作品の説明が入ります。使用技術・制作意図・工夫した点などを簡潔に。</p>
-      </li>
-      <li class="work-item fade-in">
-        <div class="work-thumb">
-          <div class="work-thumb-placeholder">IMAGE</div>
-        </div>
-        <div class="work-tag">Photoshop / Illustrator</div>
-        <h3 class="work-title serif">作品タイトル 03</h3>
-        <p class="work-desc">作品の説明が入ります。使用技術・制作意図・工夫した点などを簡潔に。</p>
-      </li>
-    </ul>
+
+    <!-- 16:9 × 3 -->
+    <div class="works-group">
+      <div class="works-group-label">16 : 9 — Web / Screen</div>
+      <ul class="works-grid-wide works-list">
+        <li class="work-item fade-in">
+          <div class="work-thumb r-16-9">
+            <div class="work-thumb-placeholder">IMAGE</div>
+          </div>
+          <div class="work-meta">
+            <div class="work-tag">HTML / CSS</div>
+            <h3 class="work-title serif">作品タイトル 01</h3>
+            <p class="work-desc">作品の説明が入ります。使用技術・制作意図・工夫した点などを簡潔に。</p>
+          </div>
+        </li>
+        <li class="work-item fade-in">
+          <div class="work-thumb r-16-9">
+            <div class="work-thumb-placeholder">IMAGE</div>
+          </div>
+          <div class="work-meta">
+            <div class="work-tag">HTML / CSS</div>
+            <h3 class="work-title serif">作品タイトル 02</h3>
+            <p class="work-desc">作品の説明が入ります。使用技術・制作意図・工夫した点などを簡潔に。</p>
+          </div>
+        </li>
+        <li class="work-item fade-in">
+          <div class="work-thumb r-16-9">
+            <div class="work-thumb-placeholder">IMAGE</div>
+          </div>
+          <div class="work-meta">
+            <div class="work-tag">HTML / CSS</div>
+            <h3 class="work-title serif">作品タイトル 03</h3>
+            <p class="work-desc">作品の説明が入ります。使用技術・制作意図・工夫した点などを簡潔に。</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 3:2 × 3 -->
+    <div class="works-group">
+      <div class="works-group-label">3 : 2 — Print / Editorial</div>
+      <ul class="works-grid-wide works-list">
+        <li class="work-item fade-in">
+          <div class="work-thumb r-3-2">
+            <div class="work-thumb-placeholder">IMAGE</div>
+          </div>
+          <div class="work-meta">
+            <div class="work-tag">Editorial Layout</div>
+            <h3 class="work-title serif">作品タイトル 04</h3>
+            <p class="work-desc">作品の説明が入ります。使用技術・制作意図・工夫した点などを簡潔に。</p>
+          </div>
+        </li>
+        <li class="work-item fade-in">
+          <div class="work-thumb r-3-2">
+            <div class="work-thumb-placeholder">IMAGE</div>
+          </div>
+          <div class="work-meta">
+            <div class="work-tag">DTP / Print</div>
+            <h3 class="work-title serif">作品タイトル 05</h3>
+            <p class="work-desc">作品の説明が入ります。使用技術・制作意図・工夫した点などを簡潔に。</p>
+          </div>
+        </li>
+        <li class="work-item fade-in">
+          <div class="work-thumb r-3-2">
+            <div class="work-thumb-placeholder">IMAGE</div>
+          </div>
+          <div class="work-meta">
+            <div class="work-tag">Photoshop / Ai</div>
+            <h3 class="work-title serif">作品タイトル 06</h3>
+            <p class="work-desc">作品の説明が入ります。使用技術・制作意図・工夫した点などを簡潔に。</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 1:1 × 6 -->
+    <div class="works-group">
+      <div class="works-group-label">1 : 1 — Detail / Parts</div>
+      <ul class="works-grid-square works-list">
+        <li class="work-item fade-in">
+          <div class="work-thumb r-1-1"><div class="work-thumb-placeholder">IMAGE</div></div>
+        </li>
+        <li class="work-item fade-in">
+          <div class="work-thumb r-1-1"><div class="work-thumb-placeholder">IMAGE</div></div>
+        </li>
+        <li class="work-item fade-in">
+          <div class="work-thumb r-1-1"><div class="work-thumb-placeholder">IMAGE</div></div>
+        </li>
+        <li class="work-item fade-in">
+          <div class="work-thumb r-1-1"><div class="work-thumb-placeholder">IMAGE</div></div>
+        </li>
+        <li class="work-item fade-in">
+          <div class="work-thumb r-1-1"><div class="work-thumb-placeholder">IMAGE</div></div>
+        </li>
+        <li class="work-item fade-in">
+          <div class="work-thumb r-1-1"><div class="work-thumb-placeholder">IMAGE</div></div>
+        </li>
+      </ul>
+    </div>
   </section>
 
   <!-- SKILLS -->
@@ -680,7 +833,6 @@
         }
       });
     }, { threshold: 0.1 });
-
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
 

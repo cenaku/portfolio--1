@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motoharu Moriguchi — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Sans+JP:wght@300;400&family=DM+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="logo label">M. Moriguchi</div>
+      <nav>
+        <ul>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-left">
+        <div class="hero-issue label">Portfolio — 2026</div>
+        <h1 class="hero-name serif">Moto<em>haru</em><br />Moriguchi</h1>
+        <p class="hero-desc">
+          友禅染・介護・DTP・報道を経て、<br />
+          WebデザインとHTML/CSSへ。<br />
+          業種は変わった。こだわりは変えなかった。
+        </p>
+      </div>
+      <div class="hero-right">
+        <ul class="hero-index">
+          <li>
+            <a href="#works" class="hero-index-item">
+              <span class="hero-index-num mono">01</span>
+              <span class="hero-index-label serif">Works</span>
+            </a>
+          </li>
+          <li>
+            <a href="#skills" class="hero-index-item">
+              <span class="hero-index-num mono">02</span>
+              <span class="hero-index-label serif">Skills</span>
+            </a>
+          </li>
+          <li>
+            <a href="#profile" class="hero-index-item">
+              <span class="hero-index-num mono">03</span>
+              <span class="hero-index-label serif">Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="hero-index-item">
+              <span class="hero-index-num mono">04</span>
+              <span class="hero-index-label serif">Contact</span>
+            </a>
+          </li>
+        </ul>
+        <div class="hero-bottom mono">
+          Kyoto, Japan — Photographer / Designer / Front-end
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKS -->
+    <section id="works">
+      <div class="section-header">
+        <span class="section-num label">01</span>
+        <h2 class="section-title serif">Works</h2>
+      </div>
+
+      <div class="works-grid-wide works-list">
+        <!-- 01 Saryo -->
+        <li class="work-item fade-in">
+          <div class="work-thumb r-16-9 work-slider" data-total="3">
+            <div class="work-slides">
+              <img
+                src="../assets/work/work_saryo_1.jpg"
+                alt="架空茶寮サイト 1"
+              />
+              <img
+                src="../assets/work/work_saryo_2.jpg"
+                alt="架空茶寮サイト 2"
+              />
+              <img
+                src="../assets/work/work_saryo_3.jpg"
+                alt="架空茶寮サイト 3"
+              />
+            </div>
+            <div class="slider-nav">
+              <button class="slider-btn slider-prev" aria-label="前へ">
+                ‹
+              </button>
+              <div class="slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+              <button class="slider-btn slider-next" aria-label="次へ">
+                ›
+              </button>
+            </div>
+          </div>
+          <div class="work-meta">
+            <div class="work-tag">01 — HTML / CSS · Photoshop · AI</div>
+            <h3 class="work-title serif">架空店舗サイト — 茶寮宝玉</h3>
+            <p class="work-desc">
+              下鴨神社まわりの観光客のうち、にぎやかさより静けさを求める層に向けた架空店舗サイト。京都らしさを写真や装飾でなく、配色と余白の設計だけで伝えることを試みた初課題です。
+              ツール：VS Code / Illustrator / Photoshop / ChatGPT（画像生成）
+            </p>
+          </div>
+        </li>
+
+        <!-- 02 Alice -->
+        <li class="work-item fade-in">
+          <div class="work-thumb r-16-9">
+            <img
+              src="../assets/work/work_alice_1.jpg"
+              alt="不思議の国のアリス展"
+            />
+          </div>
+          <div class="work-meta">
+            <div class="work-tag">02 — Photoshop · ChatGPT · LEONARDO.AI</div>
+            <h3 class="work-title serif">
+              画像処理実習 — 不思議の国のアリス展
+            </h3>
+            <p class="work-desc">
+              AI生成の門番・壁・猫を一枚にまとめた合成。素材ごとに違う色味を馴染ませる「色合わせ」が最大の難所で、寄せ集めでなくダークで没入感のあるアリス展の一場面として成立させた。ロゴはIllustratorで担当。
+              ツール：VS Code / Illustrator / Photoshop / ChatGPT / LEONARDO.AI
+            </p>
+          </div>
+        </li>
+
+        <!-- 03 Kyoto -->
+        <li class="work-item fade-in">
+          <div class="work-thumb r-16-9 work-slider" data-total="4">
+            <div class="work-slides">
+              <img src="../assets/work/work_kyoto_1.jpg" alt="京都市情報館 1" />
+              <img src="../assets/work/work_kyoto_2.jpg" alt="京都市情報館 2" />
+              <img src="../assets/work/work_kyoto_3.jpg" alt="京都市情報館 3" />
+              <img src="../assets/work/work_kyoto_4.jpg" alt="京都市情報館 4" />
+            </div>
+            <div class="slider-nav">
+              <button class="slider-btn slider-prev" aria-label="前へ">
+                ‹
+              </button>
+              <div class="slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+              <button class="slider-btn slider-next" aria-label="次へ">
+                ›
+              </button>
+            </div>
+          </div>
+          <div class="work-meta">
+            <div class="work-tag">03 — HTML / CSS · UX Design · AI</div>
+            <h3 class="work-title serif">総合実習 — 京都市情報館</h3>
+            <p class="work-desc">
+              3C・STP分析をもとにコンセプトを策定し、e-Estoniaを参考にしたタスクファースト設計で京都市公式サイトをリデザイン。「市民が用事を済ませて、早く閉じられる」行政ポータルを目指し、ターゲット分析から設計・コーディングまで一貫して制作した。
+              ツール：VS Code / HTML・CSS・JavaScript
+            </p>
+          </div>
+        </li>
+      </div>
+
+      <!-- 3:2 × 3 -->
+      <div class="works-group">
+        <div class="works-group-label">3 : 2 — Print / Editorial</div>
+        <ul class="works-grid-wide col-4 works-list">
+          <li class="work-item fade-in">
+            <div class="work-thumb r-3-2 work-slider" data-total="4">
+              <div class="work-slides">
+                <img
+                  src="../assets/work/saryo_logo_washi.png"
+                  alt="茶寮宝玉 ロゴ（和紙）"
+                />
+                <img
+                  src="../assets/work/saryo_logo_washi_green.png"
+                  alt="茶寮宝玉 ロゴ（緑）"
+                />
+                <img
+                  src="../assets/work/saryo_biz-card.png"
+                  alt="茶寮宝玉 名刺モックアップ"
+                />
+                <img
+                  src="../assets/work/washi_paperbag_logo.png"
+                  alt="茶寮宝玉 紙袋モックアップ"
+                />
+                <img
+                  src="../assets/work/saryo_tea_package.png"
+                  alt="茶寮宝玉 パッケージモックアップ"
+                />
+              </div>
+              <div class="slider-nav">
+                <button class="slider-btn slider-prev" aria-label="前へ">
+                  ‹
+                </button>
+                <div class="slider-dots">
+                  <span class="slider-dot active"></span>
+                  <span class="slider-dot"></span>
+                  <span class="slider-dot"></span>
+                  <span class="slider-dot"></span>
+                </div>
+                <button class="slider-btn slider-next" aria-label="次へ">
+                  ›
+                </button>
+              </div>
+            </div>
+            <div class="work-meta">
+              <div class="work-tag">Corporate Identity</div>
+              <h3 class="work-title serif">
+                架空店舗サイト— 茶寮宝玉のロゴとモックアップ
+              </h3>
+              <p class="work-desc">
+                Web版「茶寮宝玉」のロゴ・名刺・紙袋への展開。サイト側で立てた「装飾でなく余白で伝える」方針を、和紙の質感や紙袋の面にも持ち込み、媒体が変わっても店の静けさが崩れないことを軸に組んだ。Illustratorで制作。
+              </p>
+            </div>
+          </li>
+          <li class="work-item fade-in">
+            <div class="work-thumb r-3-2 work-slider" data-total="2">
+              <div class="work-slides">
+                <img
+                  src="../assets/work/alice_subway.jpg"
+                  alt="不思議の国のアリス展 地下鉄ポスター"
+                />
+                <img
+                  src="../assets/work/Alice_poster.png"
+                  alt="不思議の国のアリス展 ポスター"
+                />
+              </div>
+              <div class="slider-nav">
+                <button class="slider-btn slider-prev" aria-label="前へ">
+                  ‹
+                </button>
+                <div class="slider-dots">
+                  <span class="slider-dot active"></span>
+                  <span class="slider-dot"></span>
+                </div>
+                <button class="slider-btn slider-next" aria-label="次へ">
+                  ›
+                </button>
+              </div>
+            </div>
+            <div class="work-meta">
+              <div class="work-tag">DTP / Print</div>
+              <h3 class="work-title serif">
+                画像処理実習 — 不思議の国のアリス展
+              </h3>
+              <p class="work-desc">
+                Webで仕上げたアリス展の合成ビジュアルを、地下鉄広告とポスター用に再設計した印刷展開。視認距離も滞留時間も違う媒体に向けて、文字サイズと余白を組み直した。
+              </p>
+            </div>
+          </li>
+          <li class="work-item fade-in">
+            <div class="work-thumb r-3-2 work-slider" data-total="3">
+              <div class="work-slides">
+                <img
+                  src="../assets/work/drill logos.png"
+                  alt="drill ロゴデザイン"
+                />
+                <img src="../assets/work/drill_T.png" alt="drill Tシャツ" />
+                <img src="../assets/work/drill_T_2.png" alt="drill Tシャツ 2" />
+              </div>
+              <div class="slider-nav">
+                <button class="slider-btn slider-prev" aria-label="前へ">
+                  ‹
+                </button>
+                <div class="slider-dots">
+                  <span class="slider-dot active"></span>
+                  <span class="slider-dot"></span>
+                  <span class="slider-dot"></span>
+                </div>
+                <button class="slider-btn slider-next" aria-label="次へ">
+                  ›
+                </button>
+              </div>
+            </div>
+            <div class="work-meta">
+              <div class="work-tag">Photoshop / Ai</div>
+              <h3 class="work-title serif">ドリルレコードロゴデザイン</h3>
+              <p class="work-desc">
+                板橋区のバー「ドリルレコード」オープン時に、オーナーから依頼を受けて制作した実案件のロゴ。90年代グラフィックを参照しつつ、看板・Tシャツでも形が崩れないシンプルさで仕上げた。展開イメージは
+                AI 生成のモックで確認。
+              </p>
+            </div>
+          </li>
+          <li class="work-item fade-in">
+            <div class="work-thumb r-3-2 work-slider" data-total="3">
+              <div class="work-slides">
+                <img
+                  src="../assets/work/nikibi_work.png"
+                  alt="リタッチ Before/After"
+                />
+                <img
+                  src="../assets/work/color_work.png"
+                  alt="風景色校正 紅葉"
+                />
+                <img
+                  src="../assets/work/light_work.png"
+                  alt="風景色校正 コンクリート"
+                />
+              </div>
+              <div class="slider-nav">
+                <button class="slider-btn slider-prev" aria-label="前へ">
+                  ‹
+                </button>
+                <div class="slider-dots">
+                  <span class="slider-dot active"></span>
+                  <span class="slider-dot"></span>
+                  <span class="slider-dot"></span>
+                </div>
+                <button class="slider-btn slider-next" aria-label="次へ">
+                  ›
+                </button>
+              </div>
+            </div>
+            <div class="work-meta">
+              <div class="work-tag">Retouch / Color Grading</div>
+              <h3 class="work-title serif">画像加工実習 — リタッチ・色校正</h3>
+              <p class="work-desc">
+                人物写真のリタッチと、風景写真の色校正2点。素材の雰囲気を壊さない範囲で意図した印象に寄せる、最小限の調整に徹した作業セット。
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 1:1 × 6 -->
+      <!-- 1:1 × 6 -->
+      <div class="works-group">
+        <div class="works-group-label">1 : 1 — Photography / All intentional shots</div>
+        <ul class="works-grid-square works-list">
+          <li class="work-item fade-in">
+            <div class="work-thumb r-1-1">
+              <img src="../assets/work/looking-rgb-2.png" alt="路地" />
+              <p class="work-desc">パリ。CONTAX Tvs Digitalを持って歩いていた頃。</p>
+            </div>
+            <div class="work-meta">
+              <div class="work-tag">Photography</div>
+              <h3 class="work-title serif">路地</h3>
+              <p class="work-desc"></p>
+            </div>
+          </li>
+          <li class="work-item fade-in">
+            <div class="work-thumb r-1-1">
+              <img src="../assets/work/491.png" alt="コインランドリー" />
+              <p class="work-desc">パリ。CONTAX Tvs Digitalを持って歩いていた頃。</p>
+            </div>
+            <div class="work-meta">
+              <div class="work-tag">Photography</div>
+              <h3 class="work-title serif">コインランドリー</h3>
+              <p class="work-desc"></p>
+            </div>
+          </li>
+          <li class="work-item fade-in">
+            <div class="work-thumb r-1-1">
+              <img src="../assets/work/161020HDR2.png" alt="並木道" />
+              <p class="work-desc">滋賀、奥琵琶湖。秋。</p>
+            </div>
+            <div class="work-meta">
+              <div class="work-tag">Photography</div>
+              <h3 class="work-title serif">並木道</h3>
+              <p class="work-desc"></p>
+            </div>
+          </li>
+          <li class="work-item fade-in">
+            <div class="work-thumb r-1-1">
+              <img src="../assets/work/DSC00030.png" alt="工具" />
+              <p class="work-desc">革小物制作用の道具をクローズアップ。質感と重量感を木目の背景で。Shopify販売ページ用。</p>
+
+            </div>
+            <div class="work-meta">
+              <div class="work-tag">Photography</div>
+              <h3 class="work-title serif">工具</h3>
+              <p class="work-desc"></p>
+            </div>
+          </li>
+          <li class="work-item fade-in">
+            <div class="work-thumb r-1-1">
+              <img src="../assets/work/SDIM0994.png" alt="紫陽花" />
+              <p class="work-desc">野外、木漏れ日のみ。フラッシュなし。背景を限界まで整理した。</p>
+            </div>
+            <div class="work-meta">
+              <div class="work-tag">Photography</div>
+              <h3 class="work-title serif">紫陽花</h3>
+              <p class="work-desc"></p>
+            </div>
+          </li>
+          <li class="work-item fade-in">
+            <div class="work-thumb r-1-1">
+              <img src="../assets/work/SDIM1585-2.png" alt="壁" />
+              <p class="work-desc">京都駅バス停付近。光と色の重なりを狙った一枚。</p>
+            </div>
+            <div class="work-meta">
+              <div class="work-tag">Photography</div>
+              <h3 class="work-title serif">フェンス</h3>
+              <p class="work-desc"></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-header">
+        <span class="section-num label">02</span>
+        <h2 class="section-title serif">Skills</h2>
+      </div>
+      <div class="skills-inner">
+        <div class="skills-col fade-in">
+          <div class="skills-col-title label">Design & Production</div>
+          <ul class="skill-list">
+            <li class="skill-row">
+              <span class="skill-name">Photoshop</span>
+              <div class="skill-right">
+                <div class="skill-level">
+                  <div class="skill-fill" style="width: 80%"></div>
+                </div>
+                <span class="skill-tier">実務</span>
+              </div>
+            </li>
+            <li class="skill-row">
+              <span class="skill-name">Illustrator</span>
+              <div class="skill-right">
+                <div class="skill-level">
+                  <div class="skill-fill" style="width: 80%"></div>
+                </div>
+                <span class="skill-tier">実務</span>
+              </div>
+            </li>
+            <li class="skill-row">
+              <span class="skill-name">DTP / Print Output</span>
+              <div class="skill-right">
+                <div class="skill-level">
+                  <div class="skill-fill" style="width: 100%"></div>
+                </div>
+                <span class="skill-tier">実務</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="skills-col fade-in">
+          <div class="skills-col-title label">Web & Code</div>
+          <ul class="skill-list">
+            <li class="skill-row">
+              <span class="skill-name">HTML / CSS</span>
+              <div class="skill-right">
+                <div class="skill-level">
+                  <div class="skill-fill" style="width: 60%"></div>
+                </div>
+                <span class="skill-tier">訓練</span>
+              </div>
+            </li>
+            <li class="skill-row">
+              <span class="skill-name">Web Editing</span>
+              <div class="skill-right">
+                <div class="skill-level">
+                  <div class="skill-fill" style="width: 80%"></div>
+                </div>
+                <span class="skill-tier">実務</span>
+              </div>
+            </li>
+            <li class="skill-row">
+              <span class="skill-name">AI Tools</span>
+              <div class="skill-right">
+                <div class="skill-level">
+                  <div class="skill-fill" style="width: 80%"></div>
+                </div>
+                <span class="skill-tier">自学</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFILE -->
+    <section id="profile">
+      <div class="section-header">
+        <span class="section-num label">03</span>
+        <h2 class="section-title serif">Profile</h2>
+      </div>
+      <div class="profile-inner">
+        <div class="profile-main fade-in">
+          <p class="profile-lead serif">
+            異色に見えるキャリアが、<br />
+            自分の中では<em>一本の線</em>でつながっています。
+          </p>
+          <p class="profile-body">
+            友禅染の職人として10年。先を読んで今の一手を決める「段取り」の感覚は、介護・DTP・新聞社のWeb編集と業種が変わっても変えていません。今はHTML/CSSを軸に、これまでの経験を束ねられる環境を探しています。
+          </p>
+        </div>
+        <div class="profile-side fade-in">
+          <div class="profile-side-title label">Career</div>
+          <ul class="career-list">
+            <li class="career-item">
+              <div class="career-year mono">2003 – 2012</div>
+              <div class="career-role">友禅染職人 / 森口華弘</div>
+            </li>
+            <li class="career-item">
+              <div class="career-year mono">2014 – 2019</div>
+              <div class="career-role">介護福祉士 / SOMPOケア</div>
+            </li>
+            <li class="career-item">
+              <div class="career-year mono">2021 – 2022</div>
+              <div class="career-role">印刷出力 / Pod株式会社</div>
+            </li>
+            <li class="career-item">
+              <div class="career-year mono">2022 – 2025</div>
+              <div class="career-role">Web編集 / 京都新聞社</div>
+            </li>
+            <li class="career-item">
+              <div class="career-year mono">2026 –04</div>
+              <div class="career-role">Web制作 職業訓練修了</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-header">
+        <span class="section-num label">04</span>
+        <h2 class="section-title serif">Contact</h2>
+      </div>
+      <div class="contact-inner">
+        <img
+          src="../assets/get_in_touch.svg"
+          alt="Get in touch."
+          class="contact-headline-svg"
+        />
+        <ul class="contact-links">
+          <li>
+            <a href="#" class="contact-link">
+              <span class="contact-link-label">Email</span>
+              お問い合わせは履歴書をご参照ください
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/ユーザー名"
+              class="contact-link"
+              target="_blank"
+            >
+              <span class="contact-link-label">GitHub</span>
+              github.com/cenaku
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div id="work-modal" aria-hidden="true">
+      <div class="work-modal-overlay"></div>
+      <div class="work-modal-inner">
+        <button class="work-modal-close" aria-label="閉じる">×</button>
+        <div class="work-modal-slider">
+          <div class="work-modal-slides"></div>
+          <div class="modal-nav">
+            <button class="modal-btn modal-prev" aria-label="前へ">‹</button>
+            <button class="modal-btn modal-next" aria-label="次へ">›</button>
+          </div>
+          <div class="work-modal-dots"></div>
+        </div>
+        <div class="work-modal-meta">
+          <div class="work-modal-tag"></div>
+          <h3 class="work-modal-title serif"></h3>
+          <p class="work-modal-desc"></p>
+          <div class="work-modal-counter mono"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <span class="mono">© 2026 Motoharu Moriguchi</span>
+      <span class="mono">Kyoto, Japan</span>
+    </footer>
+
+    <script>
+      // Fade-in
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => entry.target.classList.add("visible"), i * 100);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".fade-in")
+        .forEach((el) => observer.observe(el));
+
+      // Card thumbnail sliders
+      document.querySelectorAll(".work-slider").forEach((slider) => {
+        const slides = slider.querySelector(".work-slides");
+        const dots = slider.querySelectorAll(".slider-dot");
+        const total = parseInt(slider.dataset.total);
+        let current = 0;
+
+        function goTo(n) {
+          current = (n + total) % total;
+          slides.style.transform = `translateX(-${current * 100}%)`;
+          dots.forEach((d, i) => d.classList.toggle("active", i === current));
+          slider.dataset.current = current;
+        }
+
+        slider.querySelector(".slider-prev").addEventListener("click", (e) => {
+          e.stopPropagation();
+          goTo(current - 1);
+        });
+        slider.querySelector(".slider-next").addEventListener("click", (e) => {
+          e.stopPropagation();
+          goTo(current + 1);
+        });
+        dots.forEach((dot, i) => {
+          dot.addEventListener("click", (e) => {
+            e.stopPropagation();
+            goTo(i);
+          });
+        });
+      });
+
+      // Modal
+      const modal = document.getElementById("work-modal");
+      const mSlides = modal.querySelector(".work-modal-slides");
+      const mDots = modal.querySelector(".work-modal-dots");
+      const mTag = modal.querySelector(".work-modal-tag");
+      const mTitle = modal.querySelector(".work-modal-title");
+      const mDesc = modal.querySelector(".work-modal-desc");
+      const mCounter = modal.querySelector(".work-modal-counter");
+      const mNav = modal.querySelector(".modal-nav");
+      let mCurrent = 0,
+        mTotal = 0;
+
+      function mGoTo(n) {
+        mCurrent = (n + mTotal) % mTotal;
+        mSlides.style.transform = `translateX(-${mCurrent * 100}%)`;
+        mDots
+          .querySelectorAll(".modal-dot")
+          .forEach((d, i) => d.classList.toggle("active", i === mCurrent));
+        mCounter.textContent = mTotal > 1 ? `${mCurrent + 1} / ${mTotal}` : "";
+      }
+
+      function openModal(item) {
+        const imgs = item.querySelectorAll(".work-thumb img");
+        mTotal = imgs.length;
+
+        mSlides.innerHTML = "";
+        imgs.forEach((img) => {
+          const div = document.createElement("div");
+          div.className = "work-modal-slide";
+          const im = document.createElement("img");
+          im.src = img.src;
+          im.alt = img.alt;
+          div.appendChild(im);
+          mSlides.appendChild(div);
+        });
+
+        mDots.innerHTML = "";
+        if (mTotal > 1) {
+          for (let i = 0; i < mTotal; i++) {
+            const dot = document.createElement("span");
+            dot.className = "modal-dot" + (i === 0 ? " active" : "");
+            dot.addEventListener("click", (e) => {
+              e.stopPropagation();
+              mGoTo(i);
+            });
+            mDots.appendChild(dot);
+          }
+        }
+
+        mTag.textContent = item.querySelector(".work-tag").textContent;
+        mTitle.textContent = item.querySelector(".work-title").textContent;
+        mDesc.textContent = item.querySelector(".work-desc").textContent;
+        mNav.style.display = mTotal > 1 ? "" : "none";
+
+        const sliderEl = item.querySelector(".work-slider");
+        const startIdx = sliderEl
+          ? parseInt(sliderEl.dataset.current || "0")
+          : 0;
+
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        mGoTo(startIdx);
+      }
+
+      function closeModal() {
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+
+      document.querySelectorAll(".work-item").forEach((item) => {
+        item.addEventListener("click", () => openModal(item));
+      });
+      modal.addEventListener("click", (e) => {
+        if (!e.target.closest(".work-modal-inner")) closeModal();
+      });
+      modal
+        .querySelector(".work-modal-close")
+        .addEventListener("click", closeModal);
+      modal.querySelector(".modal-prev").addEventListener("click", (e) => {
+        e.stopPropagation();
+        mGoTo(mCurrent - 1);
+      });
+      modal.querySelector(".modal-next").addEventListener("click", (e) => {
+        e.stopPropagation();
+        mGoTo(mCurrent + 1);
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (!modal.classList.contains("is-open")) return;
+        if (e.key === "Escape") closeModal();
+        if (e.key === "ArrowLeft") mGoTo(mCurrent - 1);
+        if (e.key === "ArrowRight") mGoTo(mCurrent + 1);
+      });
+    </script>
+  </body>
+</html>

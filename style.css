@@ -391,6 +391,20 @@ section { border-bottom: 1px solid var(--rule); }
   color: var(--muted);
 }
 
+.work-link {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  line-height: 16px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 8px;
+  transition: opacity 0.25s;
+}
+.work-link:hover { opacity: 0.6; }
+
 /* ── SKILLS ── */
 #skills .skills-inner { display: grid; grid-template-columns: 1fr 1fr; }
 
